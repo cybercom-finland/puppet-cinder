@@ -58,6 +58,8 @@ class cinder::volume (
     } else {
       $ensure = 'stopped'
     }
+  } else {
+    $ensure = undef
   }
 
   service { 'cinder-volume':
